@@ -292,6 +292,35 @@ hr{border-color:var(--out-v)!important;margin:1.5rem 0!important}
   .gca-nav-links{display:none}
   .block-container{padding-left:1rem!important;padding-right:1rem!important}
 }
+
+/* ── Force light palette (browser dark mode / no .streamlit/config.toml) ──── */
+:root,html,body,.stApp,[data-testid="stAppViewContainer"]{color-scheme:light!important}
+.stApp{color:var(--on-surf)!important}
+[data-testid="stWidgetLabel"],[data-testid="stWidgetLabel"] *,
+[data-testid="stCaptionContainer"],[data-testid="stCaptionContainer"] *,
+[data-testid="stFileUploaderDropzoneInstructions"] *,
+[data-testid="stFileUploaderDropzone"] small,
+.stTabs [data-baseweb="tab"],.stTabs [data-baseweb="tab"] *,
+[data-testid="stTab"],[data-testid="stTab"] *,
+[data-testid="stExpander"] summary,[data-testid="stExpander"] summary *,
+[data-testid="stToggle"] p{color:var(--cs)!important}
+[data-testid="stTab"][aria-selected="true"],[data-testid="stTab"][aria-selected="true"] *,.stTabs [data-baseweb="tab"][aria-selected="true"],.stTabs [data-baseweb="tab"][aria-selected="true"] *{color:var(--cp)!important}
+[data-testid="stFileUploaderDropzone"] button,[data-testid="stFileUploaderDropzone"] button *{color:#fff!important}
+/* Radio options (Streamlit >= 1.5x markup) */
+[data-testid="stRadioOption"]{
+  border-radius:var(--r-pill);padding:4px 20px!important;margin:0!important;cursor:pointer;
+}
+[data-testid="stRadioOption"] p{color:var(--cs)!important;font-size:13px;font-weight:400}
+[data-testid="stRadioOption"]>div>div:first-child{display:none!important}
+[data-testid="stRadioOption"][data-selected="true"]{
+  background:var(--surf)!important;box-shadow:0 1px 3px rgba(0,0,0,.14);
+}
+[data-testid="stRadioOption"][data-selected="true"] p{color:var(--cp)!important;font-weight:600}
+/* Inputs / dropdowns */
+[data-testid="stMultiSelect"] [data-baseweb="select"]>div,[data-testid="stSelectbox"] [data-baseweb="select"]>div,[data-baseweb="select"]>div,[data-baseweb="textarea"],[data-baseweb="base-input"],textarea,
+[data-baseweb="menu"],[data-baseweb="menu"] li{
+  background:var(--surf)!important;color:var(--on-surf)!important;
+}
 """
 
 _FONT_URLS = [
