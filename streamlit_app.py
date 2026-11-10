@@ -156,6 +156,13 @@ div[data-testid="stRadio"]>div>label>div:first-child{display:none!important}
   border-color:var(--cp)!important;background:rgba(79,70,229,.03)!important;
 }
 
+/* Newer Streamlit drops the "drag and drop" hint text — restore it */
+[data-testid="stFileUploaderDropzoneInstructions"]>div::before{
+  content:"Drag and drop file here";display:block;font-size:14px;font-weight:500;
+  color:var(--on-surf);
+}
+[data-testid="stFileUploaderDropzone"]{cursor:pointer}
+
 /* ── Tabs ────────────────────────────────────────────────────────────────── */
 .stTabs [data-baseweb="tab-list"]{
   border-bottom:2px solid var(--out-v);gap:4px;background:transparent!important;
@@ -305,6 +312,7 @@ hr{border-color:var(--out-v)!important;margin:1.5rem 0!important}
 [data-testid="stExpander"] summary,[data-testid="stExpander"] summary *,
 [data-testid="stToggle"] p{color:var(--cs)!important}
 [data-testid="stTab"][aria-selected="true"],[data-testid="stTab"][aria-selected="true"] *,.stTabs [data-baseweb="tab"][aria-selected="true"],.stTabs [data-baseweb="tab"][aria-selected="true"] *{color:var(--cp)!important}
+[data-testid="stFileUploaderDropzone"] button{background:#1f2937!important;border:0!important}
 [data-testid="stFileUploaderDropzone"] button,[data-testid="stFileUploaderDropzone"] button *{color:#fff!important}
 /* Radio options (Streamlit >= 1.5x markup) */
 [data-testid="stRadioOption"]{
